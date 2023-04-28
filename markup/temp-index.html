@@ -14,26 +14,26 @@
     <!-- Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="./styles/">
-    <link rel="preconnect" href="./media/fonts/">
-    <link rel="preconnect" href="./media/images/">
+    <link rel="preconnect" href="../styles/">
+    <link rel="preconnect" href="../media/fonts/">
+    <link rel="preconnect" href="../media/images/">
 
     <!-- Preload Fonts -->
-    <link rel="preload" href="./styles/base.css" crossorigin="anonymous">
-    <link rel="preload" href="./media/fonts/Eina01-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./media/fonts/Eina01-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./media/fonts/Eina01-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../styles/base.css" crossorigin="anonymous">
+    <link rel="preload" href="../media/fonts/Eina01-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../media/fonts/Eina01-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../media/fonts/Eina01-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <title>Simpliby - Landing Page</title>
-    <link rel="stylesheet" href="./styles/temp-index.css">
-    <link rel="shortcut icon" href="./media/images/simpliby-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/temp-index.css">
+    <link rel="shortcut icon" href="../media/images/simpliby-logo.svg" type="image/x-icon">
 
 </head>
 <body>
     <header class="container">
         <a href="#" class="site-logo">
-            <img src="./media/images/simpliby-logo.svg" alt="Simpliby logo">
+            <img src="../media/images/simpliby-logo.svg" alt="Simpliby logo">
             <p>Simpliby</p>
         </a>
         <nav>
@@ -99,14 +99,14 @@
                 <a href="#" class="btn-primary cta-btn">Join waitlist</a>
                 <div>
                     <p>Available on</p>
-                    <img class="img-small" src="./media/images/apple.svg" alt="Apple store">
-                    <img class="img-small" src="./media/images/google-play.svg" alt="Play store">
+                    <img class="img-small" src="../media/images/apple.svg" alt="Apple store">
+                    <img class="img-small" src="../media/images/google-play.svg" alt="Play store">
                 </div>
             </div>
         </div>
 
         <div class="showcase-img">
-            <img src="./media/images/showcase-img1.svg" alt="Showcase Image">
+            <img src="../media/images/showcase-img1.svg" alt="Showcase Image">
         </div>
     </section>
 
@@ -129,7 +129,7 @@
             </div>
 
             <div class="img-wp">
-                <img src="./media/images/wwa-img.png" alt="Who-we-are display image">
+                <img src="../media/images/wwa-img.png" alt="Who-we-are display image">
             </div>
         </div>
 
@@ -153,7 +153,7 @@
                     <p>Sign up for an account with your email and Email, name phone number</p>
                 </div>
 
-                <img class="cu-arrow" src="./media/images/curved-upward-arrow.svg" alt="curved upward arrow">
+                <img class="cu-arrow" src="../media/images/curved-upward-arrow.svg" alt="curved upward arrow">
             </div>
 
             <div class="hiw-round">
@@ -162,7 +162,7 @@
                     <p>Add location and select any store of your choice within your vicinity.</p>
                 </div>
 
-                <img class="cu-arrow" src="./media/images/curved-upward-arrow.svg" alt="curved upward arrow">
+                <img class="cu-arrow" src="../media/images/curved-upward-arrow.svg" alt="curved upward arrow">
             </div>
 
             <div class="hiw-round">
@@ -185,14 +185,14 @@
                 
                 <div class="cta-btns">
                     <a href="#">
-                        <img src="./media/images/google-play.svg" alt="Google Play">
+                        <img src="../media/images/google-play.svg" alt="Google Play">
                         <div>
                             <p>GET IT ON</p>
                             <h4>Google Play</h4>
                         </div>
                     </a>
                     <a href="#">
-                        <img src="./media/images/app-store.svg" alt="App store">
+                        <img src="../media/images/app-store.svg" alt="App store">
                         <div>
                             <p>GET IT ON</p>
                             <h4>App Store</h4>
@@ -202,7 +202,7 @@
             </div>
 
             <div class="cta-img-wp">
-                <img src="./media/images/smartphone.svg" alt="Call to action image">
+                <img src="../media/images/smartphone.svg" alt="Call to action image">
             </div>
         </div>
     </section>
@@ -322,22 +322,22 @@
 
         <div class="time-indicators-wp">
             <div class="time-indicator">
-                <h1>90</h1>
+                <h1 id="time-days">--</h1>
                 <p>Days</p>
             </div>
 
             <div class="time-indicator">
-                <h1>10</h1>
+                <h1 id="time-hours">--</h1>
                 <p>Hours</p>
             </div>
 
             <div class="time-indicator">
-                <h1>22</h1>
+                <h1 id="time-minutes">--</h1>
                 <p>Minutes</p>
             </div>
 
             <div class="time-indicator">
-                <h1>56</h1>
+                <h1 id="time-seconds">--</h1>
                 <p>Seconds</p>
             </div>
         </div>
@@ -359,7 +359,7 @@
         <div class="footer-content">
             <div class="footer-content-main">
                 <div class="site-logo">
-                    <img src="./media/images/simpliby-logo.svg" alt="Simpliby">
+                    <img src="../media/images/simpliby-logo.svg" alt="Simpliby">
                     <p>Simpliby</p>
                 </div>
     
@@ -386,16 +386,16 @@
 
                 <div>
                     <a href="#">
-                        <img src="./media/images/instagram-dark.svg" alt="Instagram">
+                        <img src="../media/images/instagram-dark.svg" alt="Instagram">
                     </a>
                     <a href="#">
-                        <img src="./media/images/twitter-dark.svg" alt="Twitter">
+                        <img src="../media/images/twitter-dark.svg" alt="Twitter">
                     </a>
                     <a href="#">
-                        <img src="./media/images/facebook-dark.svg" alt="Facebook">
+                        <img src="../media/images/facebook-dark.svg" alt="Facebook">
                     </a>
                     <a href="#">
-                        <img src="./media/images/linkedin-dark.svg" alt="LinkedIn">
+                        <img src="../media/images/linkedin-dark.svg" alt="LinkedIn">
                     </a>
                 </div>
             </div> 
@@ -405,7 +405,7 @@
     </footer>
 </body>
 <script>
-    let faqs = document.querySelectorAll('.faq');
+    const faqs = document.querySelectorAll('.faq');
 
     window.addEventListener('click', (event) => {
         faqs.forEach((faq) => {
@@ -414,5 +414,53 @@
             };
         });
     });
+
+    function getTimeRemaining(enddate) {
+        // enddate should take format 'mm-dd-yyyy' if string.
+
+        if (typeof enddate !== 'string' && typeof enddate !== 'object') throw new Error('enddate must be a string or object');
+
+        if (typeof enddate === 'string') enddate = new Date(enddate);
+
+        if (enddate.toString() === 'Invalid Date') throw new Error('enddate must be a valid date');
+
+        if (enddate <= new Date()){
+            return{
+                total: 0,
+                days: 0,
+                hours: 0,
+                minutes: 0,
+                seconds: 0
+            };
+        };
+
+        const total = Date.parse(enddate) - Date.parse(new Date());
+        const seconds = Math.floor((total / 1000) % 60);
+        const minutes = Math.floor((total / 1000 / 60) % 60);
+        const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+        const days = Math.floor(total / (1000 * 60 * 60 * 24));
+      
+        return {
+          total,
+          days,
+          hours,
+          minutes,
+          seconds
+        };
+    };
+
+    function setTimeRemaining(enddate) {
+        const timeRemaining = getTimeRemaining(enddate);
+
+        document.getElementById('time-days').innerHTML = timeRemaining.days;
+        document.getElementById('time-hours').innerHTML = timeRemaining.hours;
+        document.getElementById('time-minutes').innerHTML = timeRemaining.minutes;
+        document.getElementById('time-seconds').innerHTML = timeRemaining.seconds;
+    };
+    
+    setInterval(() => {
+        setTimeRemaining('06-02-2023');
+    }, 1000);
+
 </script>
 </html>
