@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom Meta -->
+    <meta name="og:image" content="">
+    <meta name="og:title" content="">
+    <meta name="og:url" content="">
+    <meta name="og:description" content="">
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="./styles/">
+    <link rel="preconnect" href="./media/fonts/">
+    <link rel="preconnect" href="./media/images/">
+
+    <!-- Preload Fonts -->
+    <link rel="preload" href="./styles/base.css" crossorigin="anonymous">
+    <link rel="preload" href="./media/fonts/Eina01-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./media/fonts/Eina01-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./media/fonts/Eina01-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Simpliby - Landing Page</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="shortcut icon" href="./media/images/simpliby-logo.svg" type="image/x-icon">
+
+</head>
+<body>
+    <header class="container">
+        <a href="#" class="site-logo">
+            <img src="./media/images/simpliby-logo.svg" alt="Simpliby logo">
+            <p>Simpliby</p>
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Who is this for?</a>
+                </li>
+                <li>
+                    <a href="#">Stores near you</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-btn nav-btn-1">Login</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-btn nav-btn-2">Open account</a>
+                </li>
+            </ul>
+
+            <div class="nav-hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- <div id="side-menu">
+        <ul>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Who is this for?</a>
+            </li>
+            <li>
+                <a href="#">Stores near you</a>
+            </li>
+            <li>
+                <a href="#" class="nav-btn nav-btn-1">Login</a>
+            </li>
+            <li>
+                <a href="#" class="nav-btn nav-btn-2">Open account</a>
+            </li>
+        </ul>
+    </div> -->
+
+    <!-- SHOWCASE SECTION -->
+    <section class="container showcase">
+        <div class="showcase-sub-text">
+            <div class="sub-text">
+                <h1>
+                    The only way to shop without waiting on the queue
+                </h1>
+                <p>
+                    Now you can reserve, pay, and pick up your item(s) from your favorite store at your convenience.
+                </p>
+            </div>
+
+            <div class="sub-cta">
+                <a href="#" class="btn-primary cta-btn">Get Simpliby</a>
+                <div>
+                    <p>Available on</p>
+                    <img class="img-small" src="./media/images/apple.svg" alt="Apple store">
+                    <img class="img-small" src="./media/images/google-play.svg" alt="Play store">
+                </div>
+            </div>
+        </div>
+
+        <div class="showcase-img">
+            <img src="./media/images/showcase-img1.svg" alt="Showcase Image">
+        </div>
+    </section>
+
+    <!-- BENEFITS/USES SECTION -->
+    <section class="container benefits">
+        <div class="benefit-card">
+            <img class="img-small" src="./media/images/b-img1.svg" alt="Eliminates wait-time">
+            <p>Simpliby makes you unbothered about long queue in stores</p>
+        </div>
+
+        <div class="benefit-card">
+            <img class="img-small" src="./media/images/b-img2.svg" alt="Avoid stress">
+            <p>Simpliby erases the stress that comes with locating items in stores</p>
+        </div>
+
+        <div class="benefit-card">
+            <img class="img-small" src="./media/images/b-img3.svg" alt="Do more">
+            <p>Simpliby helps you do more with your time.</p>
+        </div>
+    </section>
+
+    <!-- Who is Simpliby for? -->
+    <section class="targeted-clients">
+        <h1>Who is simpliby for?</h1>
+
+        <div class="client-cards-wp">
+            <div class="client-card" id="first-card">
+                <img src="./media/images/client-card-img1.png" alt="Store Owners" class="bg-img">
+                <p>If you own a store and a smart phone, you can sell on simpliby</p>
+
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <img src="./media/images/client-bd1.svg" alt="Ellipse" class="bd-img">
+            </div>
+
+            <div class="client-card" id="second-card">
+                <img class="bg-img" src="./media/images/client-card-img2.png" alt="Smartphone Owners">
+                <p>If you own a smart phone you can shop with simpliby</p>
+            </div>
+        </div>
+
+        <h3>Simpliby is for both Store owners and for you!</h3>
+    </section>
+
+    <!-- Businesses that trust us -->
+    <section class="container trusted-by">
+        <h5>We are trusted by businesses </h5>
+
+        <div class="business-logos">
+            <img src="./media/images/spar.svg" alt="Spar">
+            <img src="./media/images/shop-rite.svg" alt="Shoprite">
+            <img src="./media/images/dominos-pizzza.svg" alt="Domino's Pizza">
+            <img src="./media/images/market-square.svg" alt="Market Square">
+            <img src="./media/images/roban-stores.svg" alt="Roban Stores">
+        </div>
+    </section>
+
+    <!-- Why we are unique -->
+    <section class="htw">
+        <h1>Here's why we are unique</h1>
+
+        <div class="htw-body container">
+            <p>
+                Simpliby works with every store around you, making it easier for you to access any store of your
+                 choice with your phone, pay for any item, reserve them and swiflty pick them up at your own convinience. 
+            </p>
+            <p>You can either pay through the app or pay cash.</p>
+            <div class="htw-img" id="htw-img-1">
+                <img src="./media/images/htw-img-1.png" alt="htw image 1">
+            </div>
+
+            <p>
+                We work with store owners giving the the flexibility of bring their stores online and start 
+                earning commissions for reserving items for their customers. 
+            </p>
+            <p>If you own a space where you sell items, this app is also for you!</p>
+            <div class="htw-img" id="htw-img-2">
+                <img src="./media/images/htw-img-2.png" alt="htw image 2">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="container testimonials">
+        <h1>What the world is saying about us</h1>
+
+        <div class="testimonies">
+            <div class="testimony">
+                <img src="./media/images/chidimma.svg" alt="Chidimma">
+                <div>
+                    <p>
+                        Omo, I thought this was the regular E-commerce app, and I tried it but what i saw blew me. 
+                        OMG! Simpliby is really helpful
+                    </p>
+                    <small>@Chidimma</small>
+                </div>
+            </div>
+            <div class="testimony">
+                <img src="./media/images/favour.svg" alt="Favour">
+                <div>
+                    <p>I used the app and I must confess it was really useful</p>
+                    <small>@Favour</small>
+                </div>
+            </div>
+            <div class="testimony">
+                <img src="./media/images/glory.svg" alt="Glory">
+                <div>
+                    <p>
+                        For the fact that I do get little commissions for reserving items for my customers 
+                        I can't stop using tis app
+                    </p>
+                    <small>@Glory</small>
+                </div>
+            </div>
+            <div class="testimony">
+                <img src="./media/images/chidera.svg" alt="Chidera">
+                <div>
+                    <p>
+                        This app just made me realize how much I can do with my time, 
+                        no more wasting time while shopping.
+                    </p>
+                    <small>@Chidera</small>
+                </div>
+            </div>
+            <div class="testimony">
+                <img src="./media/images/chinecherem.svg" alt="Chinecherem">
+                <div>
+                    <p>
+                        I will recommend this app, over and over again!
+                    </p>
+                    <small>@Chinecherem</small>
+                </div>
+            </div>
+            <div class="testimony">
+                <img src="./media/images/ike.svg" alt="Ike">
+                <div>
+                    <p>
+                        I hated shopping because of the stress that comes with it, 
+                        now I shop more without stressing myself.
+                    </p>
+                    <small>@Ike</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Call to action -->
+    <section class="container final-cta">
+        <div class="cta-body">
+            <div class="cta-text-wp">
+                <div class="cta-text">
+                    <h1>Download the app!</h1>
+                    <p>it takes less than 4 mintues to register!</p>
+                </div>
+                
+                <div class="cta-btns">
+                    <a href="#">
+                        <img src="./media/images/google-play.svg" alt="Google Play">
+                        <div>
+                            <p>GET IT ON</p>
+                            <h4>Google Play</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <img src="./media/images/app-store.svg" alt="App store">
+                        <div>
+                            <p>GET IT ON</p>
+                            <h4>App Store</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cta-img-wp">
+                <img src="./media/images/smartphone.svg" alt="Call to action image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container">
+        <div class="footer-content">
+            <div class="footer-content-main">
+                <div class="site-logo">
+                    <img src="./media/images/simpliby-logo.svg" alt="Simpliby">
+                    <p>Simpliby</p>
+                </div>
+    
+                <div class="footer-links">
+                    <div class="footer-link-wp">
+                        <h5>Company</h5>
+                        <a href="#">About Us</a>
+                        <a href="#">FAQs</a>
+                    </div>
+                    <div class="footer-link-wp">
+                        <h5>Contact Us</h5>
+                        <a href="maito:contact@simpliby.com">contact@simpliby.com</a>
+                    </div>
+                    <div class="footer-link-wp">
+                        <h5>Other</h5>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms and Conditions</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-socials">
+                <p>Follow Us</p>
+
+                <div>
+                    <a href="#">
+                        <img src="./media/images/instagram-dark.svg" alt="Instagram">
+                    </a>
+                    <a href="#">
+                        <img src="./media/images/twitter-dark.svg" alt="Twitter">
+                    </a>
+                    <a href="#">
+                        <img src="./media/images/facebook-dark.svg" alt="Facebook">
+                    </a>
+                    <a href="#">
+                        <img src="./media/images/linkedin-dark.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div> 
+        </div>
+        
+        <p id="copyright">&copy; 2022 Simpliby Technologies </p>
+    </footer>
+</body>
+</html>

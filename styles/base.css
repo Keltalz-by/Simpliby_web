@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --blue-primary: #00398E;
+    --blue-primary-light: rgba(0, 57, 142, 0.6);
+    --text-color-primary: #222222;
+    --text-color-secondary: #434041;
+    --text-color-white: #ffffff;
+    --text-color-blue: #00398E;
+    --text-color-dim-white: #E0E0E0;
+    --bg-light-blue: hsla(203, 87%, 67%, 0.15);
+    --bg-powder-blue: #64bcf4;
+    --shadow-light-blue: rgba(0, 57, 142, 0.1);
+    --bg-white: #ffffff;
+    --bg-dim-white: #FDFEFF;
+    --bg-dimmer-white: #f9f5ff;
+    --btn-small-padding: 0.75rem 2.5rem;
+    --btn-large-padding: 1.25rem 3.75rem;
+    --bg-darker: #1B1A1A;
+    --bg-dark: #222222;
+    --bg-dark-transparent: rgba(34, 34, 34, 0.7);
+    --bg-blue: #00398E;
+    --bg-blue-transparent: hsl(216, 100%, 30%, 0.6);
+    --input-bg-color: #d9d9d9;
+
+}
+
+/* ----------Fonts Import------------ */
+@font-face {
+    font-family: 'Eina01-Bold';
+    src: url(../media/fonts/Eina01-Bold.woff2);
+    display: swap;
+}
+
+@font-face {
+    font-family: 'Eina01-Regular';
+    src: url(../media/fonts/Eina01-Regular.woff2);
+    display: swap;
+}
+
+@font-face {
+    font-family: 'Eina01-SemiBold';
+    src: url(../media/fonts/Eina01-SemiBold.woff2);
+    display: swap;
+}
+/* ---------------------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+}
+
+
+/*--------------- Generics ---------------- */
+
+p, ul, li, a, button, b, i, small, option, select, input{
+    font-family: 'Eina01-Regular';
+    font-size: 1rem;
+    color: var(--text-color-primary);
+    line-height: 1.5;
+}
+
+span{
+    font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, label{
+    font-family: 'Eina01-Bold';
+    color: var(--text-color-primary);
+    font-size: clamp(25px, 2vw, 50vw);
+}
+
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+img, video{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: 0.8;
+}
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    padding-inline: 5%;
+    position: relative;
+}
+
+.btn-primary{
+    background: var(--blue-primary);
+    color: var(--text-color-white);
+    border-radius: 10px;
+    padding: var(--btn-small-padding);
+    font-family: 'Eina01-SemiBold';
+    font-size: 1.125rem;
+}
+
+.img-small{
+    width: clamp(1.3rem, 2vw, 1.9rem);
+    height: clamp(1.3rem, 2vw, 1.9rem);
+}
+/* ----------------------------------------- */
+
+/* -------------Header and Navigation bar------------ */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.5rem;
+}
+
+.site-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem 0;
+    opacity: 1 !important;
+}
+
+.site-logo img{
+    width: clamp(60px, 2vw, 69px);
+    height: 39px;
+}
+
+.site-logo p{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0 2.5rem;
+    list-style: none;
+}
+
+header nav ul li a{
+    font-family: 'Eina01-SemiBold';
+    font-size: 1.125rem;
+}
+
+header nav ul li:not(:last-of-type) a:hover{
+    transition: ease-out 0.05s;
+    opacity: 1;
+    color: var(--text-color-blue);
+}
+
+.nav-btn{
+    border-radius: 10px;
+    padding: var(--btn-small-padding);
+}
+
+.nav-btn-1{
+    border: 1.25px solid var(--text-color-primary);
+}
+
+.nav-btn-1:hover{
+    border-color: var(--text-color-blue);
+}
+
+.nav-btn-2{
+    background: var(--blue-primary);
+    color: var(--text-color-white);
+}
+
+header nav .nav-hamburger{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 2.5rem;
+    height: 1.5rem;
+}
+
+.nav-hamburger .bar{
+    height: 0.25rem;
+    width: 100%;
+    background: var(--text-color-primary);
+    border-radius: 4px;
+    /* transform-origin: 0% 0%; */
+    transition: 0.5 ease-in-out;
+}
+
+/* ------------------------------------ */
+
+/* -----------Footer------------- */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background: var(--bg-dark);
+}
+
+footer > p{
+    color: var(--text-color-white);
+}
+
+.footer-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer #copyright{
+    font-family: 'Eina01-SemiBold';
+    font-size: clamp(1.125px, 2vw, 1.5rem);
+}
+
+.footer-content-main{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: clamp(40px, 2vw, 60px) clamp(126px, 4vw, 236px);
+    margin-bottom: 36px;
+}
+
+.footer-content-main .site-logo p{
+    color: var(--text-color-white);
+}
+
+.footer-content-main .footer-links{
+    display: flex;
+    flex: auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: clamp(60px, 4vw, 100px);
+}
+
+.footer-links .footer-link-wp{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 22px 0;
+}
+
+.footer-link-wp h5{
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    color: var(--text-color-white);
+}
+
+.footer-link-wp a{
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    color: var(--text-color-white);
+}
+
+.footer-socials{
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    max-width: 100%;
+}
+
+.footer-socials p{
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    color: var(--text-color-white);
+}
+
+.footer-socials > div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 10px;
+}
+
+.footer-socials > div img{
+    width: clamp(20px, 2vw, 26px);
+    height: clamp(20px, 2vw, 26px);
+    object-position: center;
+    filter: brightness(400%);
+}
+/* ----------------------------------------- */
+
+
+/* ---------------Media Queries--------------- */
+@media screen and (max-width: 1064px) {
+    header nav ul{
+        display: none;
+    }
+
+    header nav .nav-hamburger{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 900px){
+    footer .footer-content-main{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}

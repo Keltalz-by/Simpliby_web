@@ -1,0 +1,222 @@
+@import url('./base.css');
+
+header{
+    background: var(--bg-dimmer-white);
+    box-shadow: 0px 10px 20px rgba(0, 57, 142, 0.2);
+
+}
+
+/* ---------Showcase----------- */
+.showcase{
+    position: relative;
+    width: 100%;
+    min-height: 521px;
+    isolation: isolate
+}
+
+.showcase-bg-img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.showcase-bg-img img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.showcase-text{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-dark-transparent);
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(8px, 2vw, 10px) 0;
+}
+
+.showcase-text p{
+    color: var(--text-color-white);
+    font-size: clamp(1.125rem, 4vw, 1.875rem);;
+}
+
+.showcase-text h1{
+    color: var(--text-color-white);
+    font-size: clamp(1.875rem, 4vw, 4rem);
+}
+/* -------------------------------------- */
+
+
+/* -----------Quoted Text------------- */
+.quote{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-block: clamp(20px, 4vw, 40px);
+    background: url('../media/images/cross.svg');
+    background-position: 5% 40%;
+    background-repeat: no-repeat;
+}
+
+.quote-text-wp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid var(--text-color-primary);
+    border-radius: 50px 100px 100px 0px;
+    max-width: 818px;
+    margin-left: 8%;
+}
+
+.quote-text-wp p{
+    font-size: clamp(1.25rem, 4vw, 1.875rem);
+    line-height: clamp(1.25rem, 4vw, 1.875rem);
+}
+/* ---------------------------------- */
+
+
+/* -----------Mission Section----------- */
+.mission{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1760px;
+    gap: clamp(20px, 2vw, 30px);
+    background: url('../media/images/cross-slant.svg') no-repeat;
+    background-position: 52% 70%;
+}
+
+.mission-text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px 0;
+    padding-block: 60px;
+}
+
+.mission-text h1{
+    font-size: clamp(1.5rem, 6vw, 3.125rem);
+    border-radius: 30px;
+    padding: 6px 22px;
+    background: var(--bg-light-blue);
+    color: var(--text-color-blue);
+}
+
+.mission-text h2{
+    font-size: clamp(1.25rem, 3vw, 3.125rem);
+    line-height: clamp(1.5rem, 4vw, 3.875rem);
+}
+
+.mission-img{
+    flex: 1;
+    display: flex;
+    gap: 0 10px;
+    overflow-x: hidden;
+}
+
+.mission-img .dots{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 11px 0;
+}
+
+.dots .dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--blue-primary-light)
+}
+/* ------------------------------- */
+
+
+/* -------Motivation---------- */
+
+.motivation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 20px;
+    margin-bottom: 72px;
+}
+
+.motivation > h1{
+    font-size: clamp(1.25rem, 6vw, 2.5rem);
+    margin-bottom: 30px;
+}
+
+.motivation .content-wp{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px 80px;
+    padding: 20px;
+    padding-bottom: 60px;
+    border-radius: 30px;
+    background: var(--bg-dimmer-white);
+    max-width: 1760px;
+}
+
+.content-wp div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px 0;
+    max-width: 500px;
+    min-width: 280px;
+}
+
+.content-wp div h3{
+    text-align: center;
+    font-size: clamp(1.25rem, 4vw, 1.875rem);
+}
+
+.content-wp div p{
+    font-size: clamp(1.125rem, 4vw, 1.25rem);
+}
+/* ------------------------------- */
+
+
+/* ---------Media Queries---------- */
+@media screen and (max-width: 726px){
+    .showcase{
+        min-height: 250px;
+    }
+
+    .mission{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-text{
+        align-items: center;
+        text-align: center;
+        padding-block: 20px;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    .quote{
+        background-size: 20%;
+        background-position: 5% 5%;
+    }
+}
+/* ----------------------------------- */

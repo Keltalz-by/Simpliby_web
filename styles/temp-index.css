@@ -1,0 +1,704 @@
+@import url('./base.css');
+
+header{
+    /* background: var(--bg-light-blue); */
+}
+
+body{
+    background: var(--bg-dimmer-white);
+}
+
+/* --------------Showcase Section-------------- */
+
+.showcase{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: var(--bg-light-blue); */
+    width: 100%;
+}
+
+.showcase-img{
+    max-width: 50%;
+}
+
+.showcase-img img{
+    object-position: center;
+}
+
+.showcase-sub-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: clamp(40px, 6vw, 120px) 0;
+}
+
+.sub-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 18px 0;
+}
+
+.sub-text h1{
+    font-size: clamp(2.25rem, 4vw, 4rem);
+    line-height: clamp(2.25rem, 4vw, 4rem);
+}
+
+.sub-text p{
+    font-size: clamp(1.125rem, 2vw, 2rem);
+    line-height: clamp(1.25rem, 2vw, 4rem);
+}
+
+.sub-cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 18px 0;
+}
+
+.sub-cta > a{
+    font-size: clamp(1.25rem, 2vw, 2.5rem);
+    font-family: 'Eina01-Bold';
+    padding: var(--btn-large-padding);
+}
+
+.sub-cta div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 8px;
+}
+
+.sub-cta div p{
+    font-size: clamp(1.125rem, 2vw, 1.875rem);
+}
+/* ----------------------------------------- */
+
+
+/* ------------Who we are section-------------- */
+.who-we-are{
+    width: 100%;
+    max-width: 2560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 0;
+    padding-block: clamp(20px, 4vw, 40px);
+    background: var(--bg-dimmer-white);
+}
+
+.who-we-are > h1{
+    font-size: clamp(2.125rem, 4vw, 2.8125rem);
+    color: var(--text-color-blue);
+}
+
+.who-we-are p{
+    font-size: clamp(1.125rem, 1.5vw, 1.875rem);
+}
+
+.who-we-are .text-img-wp{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px 10px;
+}
+
+.who-we-are .text-img-wp .text-wp{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px 0;
+}
+
+.who-we-are .text-img-wp .img-wp{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ------------------------------ */
+
+
+/* -------------How it works---------------- */
+.how-it-works{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px 0;
+    padding-block: 20px;
+}
+
+.how-it-works > h1{
+    font-size: clamp(2.125rem, 4vw, 2.8125rem);
+    color: var(--text-color-blue);
+}
+
+.how-it-works .content-wp{
+    width: 100%;
+    max-width: 1560px;
+    display: flex;
+    min-height: 600px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.content-wp .hiw-round{
+    width: 328px;
+    height: 328px;
+    background: var(--text-color-white);
+    box-shadow: 0px 10px 20px var(--shadow-light-blue);
+    border-radius: 50%;
+}
+
+.hiw-round{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+}
+
+.hiw-round:nth-child(1){
+    align-self: flex-end;
+    position: relative;
+}
+
+.hiw-round:nth-child(1) .cu-arrow{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(108%);
+}
+
+.hiw-round:nth-child(2){
+    position: relative;
+    align-self: center;
+}
+
+.hiw-round:nth-child(2) .cu-arrow{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(108%);
+}
+
+.hiw-round:nth-child(3){
+    align-self: flex-start;
+}
+
+.hiw-round div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--bg-powder-blue);
+    padding: 22px;
+    text-align: center
+}
+
+.hiw-round div h1{
+    font-size: 4rem;
+    color: var(--text-color-blue);
+}
+
+.hiw-round div p{
+    font-size: clamp(1.125rem, 1vw, 1.375rem);
+}
+
+
+
+/* ----------Final call to action section--------- */
+
+.final-cta{
+    width: 100%;
+    padding-top: 240px;
+    padding-bottom: 94px;
+}
+
+.final-cta .cta-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 20px;
+    width: 97%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    background: var(--text-color-blue);
+    border-radius: 40px;
+    padding: 44px clamp(22px, 2vw, 27px);
+    position: relative;
+}
+
+.cta-text-wp{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 153px 0;
+    width: 50%;
+}
+
+
+.cta-text-wp .cta-text h1{
+    font-size: clamp(2.25rem, 2vw, 4rem);
+    color: var(--text-color-white);
+    margin-top: 60px;
+}
+
+.cta-text-wp .cta-text p{
+    font-size: 1.125rem;
+    color: var(--text-color-dim-white);
+}
+
+.cta-text-wp .cta-btns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0 clamp(8px, 2vw, 35px);
+}
+
+.cta-btns a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 clamp(4px, 2vw, 10px);
+    background: var(--bg-darker);
+    border-radius: 10px;
+    font-size: 1.125rem;
+    color: var(--text-color-blue);
+    text-decoration: none;
+    padding: clamp(8px, 2vw, 13px) clamp(16px, 2vw, 25px);
+}
+
+.cta-btns a img{
+    width: clamp(20px, 4vw, 57px);
+    height: clamp(20px, 4vw, 57px);
+}
+
+.cta-btns a div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(2px, 2vw, 4px) 0;
+}
+
+.cta-btns a div p{
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    color: var(--text-color-dim-white);
+}
+
+.cta-btns a div h4{
+    font-size: clamp(0.875rem, 2vw, 1.5rem);
+    color: var(--text-color-dim-white);
+}
+
+.cta-img-wp{
+    position: absolute;
+    bottom: 5%;
+    right: -5%;
+    min-width: 50%;
+    max-width: 60%;
+    max-height: 684px;
+
+}
+
+.cta-img-wp img{
+    object-position: center;
+}
+/* ----------------------------------------- */
+
+
+/* -----------------FAQs section--------------- */
+.faqs{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1760px;
+    align-items: flex-start;
+    padding-block: clamp(40px, 4vw, 86px);
+    gap: clamp(5px, 2vw, 20px);
+}
+
+.faqs-head-text{
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    min-height: 250px;
+    background: url('../media/images/question-mark.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.faqs-head-text h1{
+    font-size: clamp(2rem, 4vw, 3.125rem);
+    color: var(--text-color-blue);
+}
+
+.faqs-wp{
+    flex-basis: 55%;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+
+.faq{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.faq .question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 17px;
+    border-bottom: 1px solid #B8AFAF;
+    padding-right: 20px;
+    cursor: pointer;
+    gap: 0 10px;
+}
+
+.question h5{
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    color: var(--text-color-primary);
+}
+
+.question .faq-toggle{
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--bg-dark);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-toggle > div{
+    position: relative;
+    width: 2px;
+    height: 80%;
+    border-radius: 4px;
+    background: var(--bg-dark);
+    transform: rotate(90deg);
+}
+
+.faq-toggle > div::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    transform: rotate(90deg);
+    transition: 0.2s ease-in-out;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.faq .answer{
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.answer p{
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    color: var(--text-color-primary);
+    text-align: left;
+}
+
+.faq-ans-open{
+    padding-block: 17px;
+    height: max-content !important;
+    opacity: 1 !important;
+}
+
+.faq:has(.faq-ans-open) .faq-toggle > div::before{
+    transform: rotate(0deg);
+}
+
+/* -------------------------------------- */
+
+
+/* -------------Count-down Section------------- */
+.count-down{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(38px, 4vw, 65px) 0;
+    background: var(--bg-blue-transparent);
+    padding-top: 60px;
+    padding-bottom: 100px;
+    backdrop-filter: brightness(10%);
+    position: relative;
+}
+
+.count-down::before{
+    z-index: -1;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../media/images/countdown-bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.count-down h3{
+    text-align: center;
+    color: var(--text-color-white);
+    font-weight: 400;
+    font-family: 'Eina01-Regular';
+    font-size: clamp(2.1875rem, 4vw, 2.5rem);
+    letter-spacing: clamp(10px, 4vw, 18px);
+}
+
+.time-indicators-wp{
+    width: 100%;
+    max-width: 1560px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 26px;
+}
+
+.time-indicator{
+    width: 314px;
+    height: 314px;
+    border-radius: 50%;
+    border: 10px solid var(--bg-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.time-indicator h1{
+    font-size: clamp(6.25rem, 4vw, 12.5rem);
+    color: var(--text-color-white);
+    text-shadow: 0px 25px 50px rgba(34, 34, 34, 0.15);
+}
+
+.time-indicator p{
+    font-size: clamp(1.125rem, 2vw, 1.875rem);
+    color: var(--text-color-white);
+}
+/* --------------------------------- */
+
+
+/* --------------Subscribe------------ */
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-block: clamp(80px, 6vw, 150px);
+}
+
+.subscribe > h1{
+    font-size: clamp(2.1875rem, 4vw, 4rem);
+    margin-bottom: 16px;
+}
+
+.subscribe > p{
+    font-size: clamp(1.125rem, 4vw, 1.5rem);
+    margin-bottom: 50px;
+}
+
+#subscribe-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 clamp(4px, 2vw, 15px);
+    width: 100%;
+    height: 76px;
+}
+
+#subscribe-form input{
+    height: 100%;
+    width: 100%;
+    max-width: 676px;
+    border-radius: 10px;
+    border: 1px solid var(--bg-dark);
+    outline: none;
+    padding: clamp(8px, 2vw, 20px) clamp(14px, 2vw, 50px);
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    background: var(--input-bg-color);
+}
+
+#subscribe-form button{
+    height: 100%;
+    padding-inline: clamp(20px, 4vw, 60px);
+}
+
+/* ---------------Media Queries--------------- */
+@media screen and (min-width: 1700px){
+    .content-wp .hiw-round{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .time-indicator{
+        width: 248px;
+        height: 248px;
+    }
+}
+
+@media screen and (max-width: 1380px){
+    .how-it-works{
+        gap: 40px 0;
+    }
+    .how-it-works .content-wp{
+        flex-direction: column;
+    }
+
+    .content-wp .hiw-round{
+        align-self: center;
+    }
+
+    .hiw-round:nth-child(1) .cu-arrow{
+        top: 90%;
+        right: 0;
+        transform: translateX(40%) rotateX(180deg) rotateZ(-90deg);
+    }
+
+    .hiw-round:nth-child(2) .cu-arrow{
+        top: 90%;
+        left: 0;
+        transform: translateX(-40%) rotateZ(90deg);
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .faqs{
+        flex-direction: column;
+    }
+
+    .faqs-head-text{
+        width: 100%;
+        min-height: 180px;
+    }
+
+    .count-down .time-indicators-wp{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    .who-we-are .text-img-wp{
+        flex-direction: column-reverse;
+    }
+
+    .final-cta .cta-body{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        width: 100%;
+        height: 700px;
+    }
+
+    .cta-text-wp{
+        gap: 20px 0;
+        width: 100%;
+    }
+
+    .cta-text-wp .cta-text p{
+        display: none;
+    }
+
+    .cta-img-wp{
+        max-width: 100%;
+        max-height: 600px;
+        top: -20%;
+        right: -5%;
+    }
+
+    .cta-img-wp img{
+        height: max-content;
+    }
+
+}
+
+@media screen and (max-width: 526px) {
+    .showcase{
+        flex-direction: column;
+    }
+
+    .showcase-img{
+        max-width: 100%;
+    }
+
+    .showcase-sub-text{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .showcase-sub-text .sub-cta{
+        align-items: center;
+        text-align: center;
+    }
+
+    .final-cta .cta-body{
+        height: 450px;
+    }
+
+    #subscribe-form{
+        height: 59px;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+    .how-it-works{
+        padding-bottom: 0;
+    }
+
+    .content-wp .hiw-round{
+        width: 250px;
+        height: 250px;
+        padding: 20px;
+    }
+
+    .hiw-round div h1{
+        font-size: 3rem;
+        color: var(--text-color-blue);
+    }
+    
+    .hiw-round div p{
+        font-size: clamp(0.875rem, 1vw, 1.125rem);
+    }
+}
