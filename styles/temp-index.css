@@ -166,6 +166,8 @@ body{
     justify-content: center;
     align-items: center;
     padding: 32px;
+    transition: 0.1s ease-out;
+    cursor: pointer;
 }
 
 .hiw-round:nth-child(1){
@@ -563,6 +565,17 @@ body{
 }
 
 /* ---------------Media Queries--------------- */
+@media (hover:hover){
+    .hiw-round:hover{
+        transform: scale(1.05);
+    }
+    
+    .hiw-round:hover div{
+        background: var(--shadow-light-blue);
+        transition: 0.1s ease-out;
+    }
+}
+
 @media screen and (min-width: 1700px){
     .content-wp .hiw-round{
         width: 400px;
