@@ -19,65 +19,67 @@ const CreateAccount = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center h-full w-full gap-10 font-ERegular">
-      <div className="text-center pb-3">
-        <h1 className="text-2xl font-bold">Create your Simpliby account</h1>
-        <span className="">
-          <p>
-            Already have an account?{" "}
-            <Link to="/" className="text-[#00398E] font-semibold">
-              sign up
-            </Link>
-          </p>
-        </span>
-      </div>
-      <form action="" className=" relative flex flex-col gap-3">
-        <TextInput
-          name="full_name"
-          placeholder="Full name"
-          value={inputData.full_name}
-          handleChange={(e) => handleChange(e, setInputData, inputData)}
-          error={error}
-        />
-        <TextInput
-          name="email"
-          placeholder="Email"
-          type="email"
-          value={inputData.email}
-          handleChange={(e) => handleChange(e, setInputData, inputData)}
-          error={error}
-        />
-        <TextInput
-          name="password"
-          placeholder="Password"
-          type="password"
-          value={inputData.password}
-          handleChange={(e) => handleChange(e, setInputData, inputData)}
-          error={error}
-        />
-        <TextInput
-          name="confirm_password"
-          placeholder="Confirm password"
-          type="password"
-          value={inputData.confirm_password}
-          handleChange={(e) => handleChange(e, setInputData, inputData)}
-          error={error}
-        />
-
-        {error.InputError ? (
-          <span className="absolute -bottom-5 left-5 text-sm text-[red]">
-            {error.InputError}
+    <Layout>
+      <div className="flex flex-col items-center h-full w-full gap-10 font-ERegular">
+        <div className="text-center pb-3">
+          <h1 className="text-2xl font-bold">Create your Simpliby account</h1>
+          <span className="">
+            <p>
+              Already have an account?{" "}
+              <Link to="/" className="text-[#00398E] font-semibold">
+                sign up
+              </Link>
+            </p>
           </span>
-        ) : null}
-      </form>
-      <div>
-        <Button
-          handleClick={(e) => createAccount(inputData, setError, navigate)}
-          name="Create Account"
-          extraclass={`w-[25rem] h-[3rem] rounded-lg`}
-        />
+        </div>
+        <form action="" className=" relative flex flex-col gap-3">
+          <TextInput
+            name="full_name"
+            title="Full name"
+            value={inputData.full_name}
+            handleChange={(e) => handleChange(e, setInputData, inputData)}
+            error={error}
+          />
+          <TextInput
+            name="email"
+            title="Email"
+            type="email"
+            value={inputData.email}
+            handleChange={(e) => handleChange(e, setInputData, inputData)}
+            error={error}
+          />
+          <TextInput
+            name="password"
+            title="Password"
+            type="password"
+            value={inputData.password}
+            handleChange={(e) => handleChange(e, setInputData, inputData)}
+            error={error}
+          />
+          <TextInput
+            name="confirm_password"
+            title="Confirm password"
+            type="password"
+            value={inputData.confirm_password}
+            handleChange={(e) => handleChange(e, setInputData, inputData)}
+            error={error}
+          />
+
+          {error.InputError ? (
+            <span className="absolute -bottom-5 left-5 text-sm text-[red]">
+              {error.InputError}
+            </span>
+          ) : null}
+        </form>
+        <div>
+          <Button
+            handleClick={(e) => createAccount(inputData, setError, navigate)}
+            name="Create Account"
+            extraclass={`w-[25rem] h-[3rem] rounded-lg`}
+          />
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
