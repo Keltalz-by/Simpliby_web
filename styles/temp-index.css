@@ -559,10 +559,7 @@ body{
     background: var(--input-bg-color);
 }
 
-#subscribe-form a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#subscribe-form button{
     height: 100%;
     padding-inline: clamp(20px, 4vw, 60px);
 }
