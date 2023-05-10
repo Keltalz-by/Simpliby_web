@@ -2,8 +2,13 @@ import React from "react";
 import Button from "../../components/button";
 import OtpInput from "./OtpInput";
 import Layout from "../../components/layout";
+import { useNavigate } from "react-router-dom";
 
 const Verify = () => {
+  const navigate = useNavigate();
+  const createAccount = () => {
+    navigate("/register");
+  };
   return (
     <Layout>
       <div className="flex flex-col items-center h-full w-full gap-10 font-ERegular">
@@ -24,7 +29,7 @@ const Verify = () => {
         </div>
         <div>
           <Button
-            //   handleClick={createAccount}
+            handleClick={() => createAccount()}
             name="Continue"
             extraclass={`w-[25rem] h-[3rem] rounded-lg`}
           />

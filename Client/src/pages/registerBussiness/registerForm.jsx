@@ -3,7 +3,10 @@ import TextInput from "../../components/TextInput";
 import Button from "../../components/button";
 import Upload from "../../components/upload";
 
-const Register = () => {
+const Register = ({ setIsOpen }) => {
+  const toggleModal = () => {
+    setIsOpen(true);
+  };
   return (
     <Layout>
       <div className="flex flex-col items-center w-full gap-10 font-ERegular mb-5">
@@ -58,7 +61,11 @@ const Register = () => {
           <Upload title="upload your logo (or whatever you are known for)" />
         </form>
         <div>
-          <Button name="Submit" extraclass={`w-[25rem] h-[3rem] rounded-lg`} />
+          <Button
+            name="Submit"
+            extraclass={`w-[25rem] h-[3rem] rounded-lg`}
+            handleClick={() => toggleModal()}
+          />
         </div>
       </div>
     </Layout>

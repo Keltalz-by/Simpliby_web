@@ -3,10 +3,10 @@ import Register from "./registerForm";
 import Modal from "./modal";
 
 const index = () => {
-  const [open, setIsopen] = useState(true);
+  const [open, setIsopen] = useState(false);
   return (
     <div className="relative">
-      <Register />
+      <Register setIsOpen={setIsopen} />
       <div
         className={`${
           open ? "fixed block top-0 left-0" : "hidden"
