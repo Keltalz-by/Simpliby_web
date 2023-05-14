@@ -1,4 +1,8 @@
 const faqs = document.querySelectorAll('.faq');
+const subscribeForm = document.querySelector('#subscribe-form');
+// const subscribeFormInput = subscribeForm.querySelector('input');
+// const subscribeFormButton = subscribeForm.querySelector('button');
+
 
 window.addEventListener('click', (event) => {
     faqs.forEach((faq) => {
@@ -6,7 +10,18 @@ window.addEventListener('click', (event) => {
             faq.querySelector('.answer').classList.toggle('faq-ans-open');
         };
     });
+
+    // if(subscribeFormButton.contains(event.target)){
+    //     let subscriberEmail = subscribeFormInput.value;
+    // };
 });
+
+
+// Subscription form validation
+// subscribeFormInput.addEventListener('input', () => {
+//     subscribeFormButton.disabled = !subscribeFormInput.checkValidity();
+// });
+
 
 function getTimeRemaining(enddate) {
     // enddate should take format 'mm-dd-yyyy' if string.
@@ -54,3 +69,5 @@ function setTimeRemaining(enddate) {
 setInterval(() => {
     setTimeRemaining('06-02-2023');
 }, 1000);
+
+
