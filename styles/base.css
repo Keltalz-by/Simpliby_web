@@ -85,6 +85,10 @@ button{
     border: none;
 }
 
+button:active{
+    scale: 0.98;
+}
+
 img, video{
     display: block;
     max-width: 100%;
@@ -118,6 +122,11 @@ a:hover{
 .img-small{
     width: clamp(1.3rem, 2vw, 1.9rem);
     height: clamp(1.3rem, 2vw, 1.9rem);
+}
+
+.btn-primary:disabled{
+    pointer-events: none;
+    opacity: 0.7;
 }
 /* ----------------------------------------- */
 
