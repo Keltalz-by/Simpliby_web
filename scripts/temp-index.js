@@ -71,3 +71,16 @@ setInterval(() => {
 }, 1000);
 
 
+const animObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('start-anim');
+        };
+    });
+});
+
+const hiwRoundsWrapper = document.querySelector('.how-it-works .content-wp');
+animObserver.observe(hiwRoundsWrapper);
+
+const ctaSection = document.querySelector('.final-cta');
+animObserver.observe(ctaSection);
