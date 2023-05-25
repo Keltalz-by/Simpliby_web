@@ -76,7 +76,7 @@
                 <a href="#">Stores near you</a>
             </li>
             <li>
-                <a href="#" class="nav-btn nav-btn-2">Join waitlist</a>
+                <a href="#subscribe-section" class="nav-btn nav-btn-2">Join waitlist</a>
             </li>
         </ul>
     </div>
@@ -88,13 +88,15 @@
                 <h1>
                     The only way to shop without waiting on the queue
                 </h1>
-                <p>
-                    Now you can reserve, pay, and pick up your item(s) from your favorite store at your convenience.
-                </p>
+                <span>
+                    <p>
+                        Now you can reserve, pay, and pick up your item(s) from your favorite store at your convenience.
+                    </p>
+                </span>
             </div>
 
             <div class="sub-cta">
-                <a href="#" class="btn-primary cta-btn">Join waitlist</a>
+                <a href="#subscribe-section" class="btn-primary cta-btn">Join waitlist</a>
                 <div>
                     <p>Available on</p>
                     <img class="img-small" src="../media/images/apple.svg" alt="Apple store">
@@ -342,14 +344,16 @@
     </section>
 
     <!-- Subscribe -->
-    <section class="subscribe container">
+    <section class="subscribe container" id="subscribe-section">
         <h1>Join our waitlist and get special offers </h1>
         <p>Be the first to get latest information regarding our launch date and subsequent updates on your email.</p>
 
-        <form id="subscribe-form" action="https://simpliby.substack.com/api/v1/free?nojs=true" method="POST" enctype="application/x-www-form-urlencoded">
+        <!-- <form id="subscribe-form" action="https://simpliby.substack.com/api/v1/free?nojs=true" method="POST">
             <input type="email" placeholder="Enter your email address">
-            <button class="btn-primary" type="submit">Subscribe</button>
-        </form>
+            <button class="btn-primary" disabled type="button">Subscribe</button>
+        </form> -->
+
+        <iframe src="https://simpliby.substack.com/embed" frameborder="0" scrolling="no" style="width: 100%;background: white;"></iframe>
     </section>
 
     <!-- Footer -->
@@ -386,20 +390,20 @@
                     <a href="#">
                         <img src="../media/images/instagram-dark.svg" alt="Instagram">
                     </a>
-                    <a href="#">
+                    <a href="https://twitter.com/simpliby?t=t6vb2spIK7zTSXEjaY2Uaw&s=09" target="_blank">
                         <img src="../media/images/twitter-dark.svg" alt="Twitter">
                     </a>
                     <a href="#">
                         <img src="../media/images/facebook-dark.svg" alt="Facebook">
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/company/simpliby" target="_blank">
                         <img src="../media/images/linkedin-dark.svg" alt="LinkedIn">
                     </a>
                 </div>
             </div> 
         </div>
         
-        <p id="copyright">&copy; 2022 Simpliby Technologies </p>
+        <p id="copyright">&copy; 2023 Simpliby Technologies </p>
     </footer>
 </body>
 <script src="../scripts/index.js"></script>
