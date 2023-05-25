@@ -9,7 +9,7 @@ const Register = ({ setIsOpen }) => {
   };
   return (
     <Layout>
-      <div className="flex flex-col items-center w-full gap-10 font-ERegular mb-5">
+      <div className="flex flex-col items-center w-full gap-10 font-ERegular pb-5">
         <div className="text-center pb-3">
           <h1 className="text-2xl font-bold">
             Let's know more about your bussiness
