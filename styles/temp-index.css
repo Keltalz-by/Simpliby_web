@@ -425,6 +425,7 @@ body{
 
 .cta-img-wp img{
     object-position: center;
+    isolation: isolate;
 }
 
 .start-anim .cta-img-wp img{
@@ -436,7 +437,7 @@ body{
     from{
         transform: translateY(0);
     }to{
-        transform: translateY(-60px);
+        transform: translateY(-40px);
     }
 }
 
