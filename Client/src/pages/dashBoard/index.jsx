@@ -8,8 +8,8 @@ const Dashboard = () => {
     <section className="bg-[#dfeffa] flex flex-col gap-3 h-screen overflow-hidden font-ERegular py-2 px-5 ">
       <header className="flex justify-between items-center mb-8">
         <div>
-          <h2 className="text-2xl font-Esemi">Good morning Roban Store</h2>
-          <p className="text-xl font-ERegular">
+          <h2 className="text-xl font-Esemi">Good morning Roban Store</h2>
+          <p className="text-lg font-ERegular">
             Ready to make some cool cash today?
           </p>
         </div>

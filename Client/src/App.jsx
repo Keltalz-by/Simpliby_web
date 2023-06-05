@@ -9,6 +9,7 @@ import Message from "./pages/Message";
 import Setting from "./pages/Settings";
 import Purchase from "./pages/Purchase";
 import Sidebar from "./components/Sidebar";
+import History from "./pages/History";
 import ProtectedLayout from "./components/ProtectedLayout";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="messages" element={<Message />} />
         <Route path="purchase" element={<Purchase />} />
         <Route path="settings" element={<Setting />} />
+        <Route path="history" element={<History />} />
       </Route>
     </Routes>
   );

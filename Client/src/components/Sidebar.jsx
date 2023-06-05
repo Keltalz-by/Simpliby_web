@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AiFillHome, AiFillMessage } from "react-icons/ai";
 import { HiShoppingCart } from "react-icons/hi";
 import { IoMdSettings } from "react-icons/io";
+import { MdWorkHistory } from "react-icons/md";
 
 const Sidebar = () => {
   const [active, setActive] = useState("home");
@@ -31,6 +32,11 @@ const Sidebar = () => {
       link: "settings",
       name: "settings",
       icon: <IoMdSettings className="w-5 h-5 hover:text-[#00398E]" />,
+    },
+    {
+      link: "history",
+      name: "history",
+      icon: <MdWorkHistory className="w-5 h-5 hover:text-[#00398E]" />,
     },
   ];
 
