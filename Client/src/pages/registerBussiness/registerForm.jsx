@@ -1,7 +1,7 @@
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import TextInput from "../../components/TextInput";
-import Button from "../../components/button";
-import Upload from "../../components/upload";
+import Button from "../../components/Button";
+import Upload from "../../components/Upload";
 
 const Register = ({ setIsOpen }) => {
   const toggleModal = () => {

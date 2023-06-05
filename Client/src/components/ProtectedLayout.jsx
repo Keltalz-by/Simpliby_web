@@ -1,13 +1,14 @@
 import React from "react";
 import Sidebar from "./Sidebar";
+import { Outlet } from "react-router-dom";
 
-const ProtectedLayout = ({ children }) => {
+const ProtectedLayout = () => {
   return (
     <div className="flex">
       <div>
         <Sidebar />
       </div>
-      <div className="flex-1">{children}</div>
+      <Outlet />
     </div>
   );
 };

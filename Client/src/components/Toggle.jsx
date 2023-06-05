@@ -1,24 +1,35 @@
 import { useState } from "react";
-import { Switch } from "@headlessui/react";
+import { Switch, Tab } from "@headlessui/react";
 
 const Toggle = () => {
-  const [enabled, setEnabled] = useState(false);
+  const [enabled, setEnabled] = useState("active");
+  const Toggle = (state) => {
+    setEnabled(state);
+  };
 
   return (
-    <Switch
-      checked={enabled}
-      onChange={setEnabled}
-      className={`${
-        enabled ? "bg-gray-200" : "bg-blue-500"
-      } relative inline-flex h-4 w-7 items-center rounded-full`}
-    >
-      <span className="sr-only">Enable notifications</span>
-      <span
-        className={`${
-          enabled ? "translate-x-4" : "translate-x-1"
-        } inline-block h-2 w-2 transform rounded-full bg-white transition`}
-      />
-    </Switch>
+    <Tab.Group className="">
+      <Tab.List className="">
+        <Tab
+          onClick={() => Toggle("active")}
+          className={`px-11 py-2 text-center rounded-md ${
+            enabled == "active" ? `bg-white text-[#00398E]` : `text-[#222222B2]`
+          }`}
+        >
+          Active
+        </Tab>
+        <Tab
+          onClick={() => Toggle("offline")}
+          className={`px-11 py-2  text-center rounded-md ${
+            enabled == "offline"
+              ? `bg-white text-[#00398E]`
+              : `text-[#222222B2]`
+          }`}
+        >
+          Offline
+        </Tab>
+      </Tab.List>
+    </Tab.Group>
   );
 };
 export default Toggle;
