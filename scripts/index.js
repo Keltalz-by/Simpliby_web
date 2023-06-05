@@ -11,3 +11,14 @@ window.addEventListener('click', (e) => {
         dropDownHamburgerMenu.classList.remove('open-menu');
     };  
 });
+
+const animObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('start-anim');
+        };
+    });
+});
+
+const ctaSection = document.querySelector('.final-cta');
+animObserver.observe(ctaSection);
