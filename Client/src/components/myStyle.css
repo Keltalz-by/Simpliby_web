@@ -1,0 +1,12 @@
+.custom-dots li button:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: white; /* Default background color for dots */
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+.custom-dots li.slick-active button:before {
+  background-color: red; /* Background color for the active dot */
+}

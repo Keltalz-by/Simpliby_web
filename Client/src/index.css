@@ -22,7 +22,9 @@
     scrollbar-width: none; /* Firefox */
   }
 }
-
+:global(.slick-active) {
+  background-color: red;
+}
 @font-face {
   font-family: "Ebold";
   src: url("./assets/fonts/Eina01-Bold.woff2");

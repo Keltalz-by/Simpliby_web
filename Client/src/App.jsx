@@ -11,6 +11,9 @@ import Purchase from "./pages/Purchase";
 import Sidebar from "./components/Sidebar";
 import History from "./pages/History";
 import ProtectedLayout from "./components/ProtectedLayout";
+import Carousel from "./components/Slider";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
@@ -20,7 +23,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/dashboard/*" element={<ProtectedLayout />}>
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route index element={<Dashboard />} />
         <Route path="messages" element={<Message />} />
         <Route path="purchase" element={<Purchase />} />
         <Route path="settings" element={<Setting />} />

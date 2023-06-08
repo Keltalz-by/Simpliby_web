@@ -4,7 +4,7 @@ const Button = ({ name, extraclass, handleClick }) => {
   return (
     <>
       <button
-        className={`bg-[#00398E] text-white ${extraclass} font-Esemi`}
+        className={`bg-[#00398E] text-white text-xl ${extraclass} font-Esemi`}
         onClick={handleClick}
       >
         {name}
