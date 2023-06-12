@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Custom Meta -->
     <meta name="og:image" content="">
@@ -18,6 +18,7 @@
     <link rel="preconnect" href="../media/fonts/">
     <link rel="preconnect" href="../media/images/">
 
+
     <!-- Preload Fonts -->
     <link rel="preload" href="../styles/base.css" crossorigin="anonymous">
     <link rel="preload" href="../media/fonts/Eina01-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -25,11 +26,13 @@
     <link rel="preload" href="../media/fonts/Eina01-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Simpliby - Stores Near You</title>
-    <link rel="stylesheet" href="../styles/stores-near-you.css">
+    <title>Simpliby - Contact us</title>
     <link rel="shortcut icon" href="../media/images/simpliby-logo.svg" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/contact.css" />
+    <title>Simpliby - Contact us</title>
+  </head>
+  
+  <body>
     <header class="container">
         <a href="../" class="site-logo">
             <img src="../media/images/simpliby-logo.svg" alt="Simpliby logo">
@@ -40,15 +43,11 @@
                 <li>
                     <a href="../about/">About</a>
                 </li>
+          
                 <li>
                     <a href="../stores-near-you/">Stores near you</a>
                 </li>
-                <!-- <li>
-                    <a href="#" class="nav-btn nav-btn-1">Login</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-btn nav-btn-2">Open account</a>
-                </li> -->
+                
                 <li>
                     <a href="../#subscribe-section" class="nav-btn nav-btn-2">Join waitlist</a>
                 </li>
@@ -70,52 +69,57 @@
             <li>
                 <a href="../about/">About</a>
             </li>
-            <!-- <li>
-                <a href="#">Who is this for?</a>
-            </li> -->
             <li>
                 <a href="../stores-near-you/">Stores near you</a>
             </li>
-            <!-- <li>
-                <a href="#" class="nav-btn nav-btn-1">Login</a>
-            </li>
-            <li>
-                <a href="#" class="nav-btn nav-btn-2">Open account</a>
-            </li> -->
             <li>
                 <a href="../#subscribe-section" class="nav-btn nav-btn-2">Join waitlist</a>
             </li>
         </ul>
     </div>
 
-    <main class="container">
-        <h1>Let's help you locate nearby stores</h1>
+    <main>
+      <!-- Container -->
 
-        <form action="" method="" enctype="application/x-www-form-urlencoded">
-            <div class="form-group">
-                <label for="countries">What country are you currently at?</label>
-                <div class="select-wp">
-                    <p>&#9660;</p>
-                    <select name="countries" id="country-list">
-                        <!-- Countries Go Here -->
-                    </select>
-                </div>
-            </div>
+      <div id="container">
+        <h1>Contact us</h1>
+        <!-- Sub Container -->
 
-            <div class="form-group">
-                <label for="cities">What city?</label>
-                <div class="select-wp">
-                    <p>&#9660;</p>
-                    <select name="cities" id="city-list">
-                        <!-- Cities in the chosen country go here -->
-                    </select>
-                </div>
-            </div>
+        <div class="sub-container">
+          <div id="contact-info">
+            <section></section>
+            <p id="line">
+              Kindly Let us know how we can be of assistance to you
+            </p>
+          </div>
 
-            <button class="btn-primary" id="search-btn">Search</button>
-        </form>
+          <div id="contact-form">
+            <!-- form  -->
+
+            <form action="#">
+              <input type="text" placeholder="Name" id="contact-name" />
+
+              <div id="contact_email-contact_tel">
+                <input type="email" placeholder="Email" id="contact-email" />
+
+                <input type="tel" placeholder="Phone" id="contact-tel" />
+              </div>
+
+              <input type="text" placeholder="Subject" id="contact-subject" />
+
+              <textarea
+                name=""
+                id=""
+                placeholder="Message"
+              ></textarea>
+
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
     </main>
-</body>
-<script src="../scripts/stores-near-you.js"></script>
-<script src="../scripts/index.js"></script>
+  </body>
+  <script src="../scripts/contact.js"></script>
 </html>
