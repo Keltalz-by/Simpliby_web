@@ -14,7 +14,7 @@ const Sidebar = () => {
 
   const Links = [
     {
-      link: "",
+      link: "home",
       name: "home",
       icon: <AiFillHome className="w-5 h-5 hover:text-[#00398E]" />,
     },

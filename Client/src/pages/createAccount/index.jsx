@@ -6,6 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { createAccount } from "../../utils/functions/auth/createAccount";
 import { handleChange } from "../../utils/functions/auth/handleChange";
 import Carousel from "../../components/Slider";
+import { useMutation, useQuery } from "@tanstack/react-query";
+
 const CreateAccount = () => {
   const [inputData, setInputData] = useState({
     full_name: "",
@@ -13,11 +15,23 @@ const CreateAccount = () => {
     password: "",
     confirm_password: "",
   });
-  const [error, setError] = useState({
+  const [Error, setError] = useState({
     InputError: "",
   });
-
+  const [Enabled, setEnabled] = useState(false);
   const navigate = useNavigate();
+
+  const createUser = useMutation({
+    mutationKey: ["createUser"],
+    mutationFn: () => createAccount(inputData, setError, navigate),
+    onSettled: navigate("/verify"),
+  });
+  // const RegisterUser = () => {
+  //   console.log(error, isFetching, data);
+  //   refetch();
+  //   console.log(error, isFetching, data);
+  //   if (data) navigate("/verify");
+  // };
 
   return (
     <Carousel>
@@ -42,7 +56,7 @@ const CreateAccount = () => {
               title="Full name"
               value={inputData.full_name}
               handleChange={(e) => handleChange(e, setInputData, inputData)}
-              error={error}
+              error={Error}
             />
             <TextInput
               name="email"
@@ -50,7 +64,7 @@ const CreateAccount = () => {
               type="email"
               value={inputData.email}
               handleChange={(e) => handleChange(e, setInputData, inputData)}
-              error={error}
+              error={Error}
             />
             <TextInput
               name="password"
@@ -58,7 +72,7 @@ const CreateAccount = () => {
               type="password"
               value={inputData.password}
               handleChange={(e) => handleChange(e, setInputData, inputData)}
-              error={error}
+              error={Error}
             />
             <TextInput
               name="confirm_password"
@@ -66,18 +80,19 @@ const CreateAccount = () => {
               type="password"
               value={inputData.confirm_password}
               handleChange={(e) => handleChange(e, setInputData, inputData)}
-              error={error}
+              error={Error}
             />
 
-            {error.InputError ? (
+            {Error.InputError ? (
               <span className="absolute -bottom-5 left-5 text-sm text-[red]">
-                {error.InputError}
+                {Error.InputError}
               </span>
             ) : null}
           </form>
           <div>
             <Button
-              handleClick={(e) => createAccount(inputData, setError, navigate)}
+              handleClick={() => createUser.mutate()}
+              // loading={isFetching}
               name="Create Account"
               extraclass={`w-[25rem] h-[3rem]  rounded-lg`}
             />

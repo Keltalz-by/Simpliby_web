@@ -14,6 +14,7 @@ import ProtectedLayout from "./components/ProtectedLayout";
 import Carousel from "./components/Slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Chat from "./pages/Message/Chat";
 
 function App() {
   return (
@@ -22,9 +23,10 @@ function App() {
       <Route path="/verify" element={<Verify />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/dashboard/*" element={<ProtectedLayout />}>
-        <Route index element={<Dashboard />} />
+      <Route path="/dashboard/" element={<ProtectedLayout />}>
+        <Route path="home" element={<Dashboard />} />
         <Route path="messages" element={<Message />} />
+        <Route path="messages/chat/:id" element={<Chat />} />
         <Route path="purchase" element={<Purchase />} />
         <Route path="settings" element={<Setting />} />
         <Route path="history" element={<History />} />

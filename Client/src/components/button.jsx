@@ -1,13 +1,14 @@
 import React from "react";
 
-const Button = ({ name, extraclass, handleClick }) => {
+const Button = ({ name, extraclass, handleClick, loading }) => {
   return (
     <>
       <button
         className={`bg-[#00398E] text-white text-xl ${extraclass} font-Esemi`}
-        onClick={handleClick}
+        onClick={(e) => handleClick()}
+        disabled={loading}
       >
-        {name}
+        {loading === true ? "loading..." : name}
       </button>
     </>
   );
