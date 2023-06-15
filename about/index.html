@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom Meta -->
+    <meta name="og:image" content="">
+    <meta name="og:title" content="">
+    <meta name="og:url" content="">
+    <meta name="og:description" content="">
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="../styles/">
+    <link rel="preconnect" href="../media/fonts/">
+    <link rel="preconnect" href="../media/images/">
+
+    <!-- Preload Fonts -->
+    <link rel="preload" href="../styles/base.css" crossorigin="anonymous">
+    <link rel="preload" href="../media/fonts/Eina01-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../media/fonts/Eina01-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="../media/fonts/Eina01-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Simpliby - About Page</title>
+    <link rel="stylesheet" href="../styles/about.css">
+    <link rel="shortcut icon" href="../media/images/simpliby-logo.svg" type="image/x-icon">
+</head>
+<body>
+    <header class="container">
+        <a href="../" class="site-logo">
+            <img src="../media/images/simpliby-logo.svg" alt="Simpliby logo">
+            <p>Simpliby</p>
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <!-- <li>
+                    <a href="#">Who is this for?</a>
+                </li> -->
+                <li>
+                    <a href="../stores-near-you/">Stores near you</a>
+                </li>
+                <!-- <li>
+                    <a href="#" class="nav-btn nav-btn-1">Login</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-btn nav-btn-2">Open account</a>
+                </li> -->
+                <li>
+                    <a href="../#subscribe-section" class="nav-btn nav-btn-2">Join waitlist</a>
+                </li>
+            </ul>
+
+            <div class="nav-hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HAMBURGER DROP MENU -->
+    <div class="drop-menu">
+        <p id="close-menu-btn">&#10005;</p>
+
+        <ul class="drop-menu-items">
+            <li>
+                <a href="#">About</a>
+            </li>
+            <!-- <li>
+                <a href="#">Who is this for?</a>
+            </li> -->
+            <li>
+                <a href="../stores-near-you/">Stores near you</a>
+            </li>
+            <!-- <li>
+                <a href="#" class="nav-btn nav-btn-1">Login</a>
+            </li>
+            <li>
+                <a href="#" class="nav-btn nav-btn-2">Open account</a>
+            </li> -->
+            <li>
+                <a href="../#subscribe-section" class="nav-btn nav-btn-2">Join waitlist</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Showcase Section -->
+    <section class="showcase">
+        <div class="showcase-bg-img">
+            <img src="../media/images/about-showcase-img.png" alt="Showcase background">
+        </div>
+        
+        <div class="showcase-text">
+            <h1>About Simpliby</h1>
+            <p>Simplifying your shopping experience</p>
+        </div>
+    </section>
+
+    <!-- Quoted text -->
+    <section class="quote container">
+        <div class="quote-text-wp">
+            <p>
+                We know you can do a lot with your time, so we can't 
+                afford to watch you waste it while searching for an item 
+                or queueing in a store.
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="mission container">
+        <div class="mission-text">
+            <h1>Our Mission</h1>
+            <h2>
+                To give everyone the ability to shop at their convinence and 
+                without <span>limitation</span>.
+            </h2>
+        </div>
+
+        <div class="mission-img">
+            <img src="../media/images/ms-img.png" alt="Mission section image">
+
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivation -->
+    <section class="motivation container">
+        <h1>Our Motivation</h1>
+
+        <div class="content-wp">
+            <div>
+                <h3>Before</h3>
+                <p>
+                    Shopping was becoming so difficult and crowdy, many persons avoided shopping due to the hassle that comes with it. 
+                    While some transitioned into trusting delivery services and eventually had an awful experience
+                </p>
+            </div>
+
+            <div>
+                <h3>The pain</h3>
+                <p>
+                    Individuals having to stand on a long queue, delay in locating items to be purchased and lack of privacy in purchasing some 
+                    certain products and we also saw how this affected most store owners to close on time,
+                     being rude to their customers and a loss of products due to theft as a result of crowded store.  
+                </p>
+            </div>
+
+            <div>
+                <h3>After</h3>
+                <p>
+                    Simpliby is a solution created that allows it's users to purchase any item, 
+                    reserve them and set a time at which they intend to pick it up paying either cash or via the app.  
+                    It also allows Store owners to generate commisions for reserving items.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="../scripts/index.js"></script>
+</html>

@@ -1,0 +1,130 @@
+@import url('./base.css');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+body{
+  background-color: #F5F9FF;
+}
+
+#container {
+  max-width: 1440px;
+  width: 95%;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+#container h1 {
+  color: rgb(7, 7, 87);
+  padding-bottom: 0.5rem;
+  font-size: 3.125rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.sub-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  /* padding: 0.5rem; */
+}
+
+#contact-info p {
+  border-top: 1px solid #B8AFAF;
+  width: 100%;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  padding-top: 16px;
+}
+
+/*  */
+#contact-info {
+  text-align: left;
+  flex: 1;
+}
+
+
+#contact-form {
+  flex: 2;
+  max-width: 100%;
+  position: relative;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  outline: none;
+  padding: clamp(10px, 2vw, 20px);
+  margin-bottom: 25px;
+  background-color: var(--bg-white);
+  border-radius: 10px;
+  border: 1px solid var(--text-color-primary);
+  font-family: 'Eina01-Regular';
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--text-color-primary);
+}
+
+
+#contact-form textarea {
+  height: 180px;
+  resize: none;
+}
+#contact_email-contact_tel {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+#contact-tel {
+  flex: 1;
+  max-width: 50%;
+  margin-left: 15px;
+}
+#contact-email {
+  flex: 1;
+  max-width: 50%;
+  margin-right: 15px;
+}
+/*  */
+
+
+button {
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  background-color: var(--bg-blue);
+  color: white;
+  float: right;
+  font-family: 'Eina01-Bold';
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+/* media queries for a 800px */
+
+@media (max-width: 800px) {
+
+  h1,p{
+    text-align: center;
+  }
+  
+  #contact-info , #contact-form {
+    
+    flex: 100%;
+  }
+  
+}
+
+/* media queries for a 480px */
+
+@media (max-width:480px) {
+  #contact-email,#contact-tel{
+  max-width: 100%;
+  flex: 100%;
+ margin: 0;
+}
+}
