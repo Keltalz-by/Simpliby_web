@@ -60,7 +60,7 @@ const Card = ({ item }) => {
             className={`h-auto p-3 my-1
             ${
               item.messageID == "user"
-                ? "ml-auto bg-[#64BCF4] rounded-t-xl rounded-bl-xl"
+                ? "ml-auto bg-[#E0F2FD] rounded-t-xl rounded-bl-xl"
                 : "mr-auto  bg-[#D9D9D9]  rounded-t-xl rounded-br-xl"
             }`}
           >
