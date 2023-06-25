@@ -20,7 +20,7 @@ body{
 }
 
 #container h1 {
-  color: rgb(7, 7, 87);
+  color: var(--text-color-blue);
   padding-bottom: 0.5rem;
   font-size: 3.125rem;
   font-weight: 600;
