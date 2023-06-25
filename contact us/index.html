@@ -19,17 +19,20 @@
     <link rel="preconnect" href="../media/images/">
 
 
-    <!-- Preload Fonts -->
+    <!-- Preload Fonts and Images -->
     <link rel="preload" href="../styles/base.css" crossorigin="anonymous">
     <link rel="preload" href="../media/fonts/Eina01-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="../media/fonts/Eina01-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="../media/fonts/Eina01-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="../media/images/message-failed.svg" as="image" type="image/svg+xml" crossorigin="anonymous">
 
     <title>Simpliby - Contact us</title>
     <link rel="shortcut icon" href="../media/images/simpliby-logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="../styles/contact.css" />
     <title>Simpliby - Contact us</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   
   <body>
@@ -96,30 +99,51 @@
           <div id="contact-form">
             <!-- form  -->
 
-            <form action="#">
-              <input type="text" placeholder="Name" id="contact-name" />
+            <form action="#" id="message-form">
+              <input type="hidden" name="contact_number">
+
+              <input type="text" placeholder="Name" id="contact-name" name="sender_name" required/>
 
               <div id="contact_email-contact_tel">
-                <input type="email" placeholder="Email" id="contact-email" />
+                <input type="email" placeholder="Email" id="contact-email" name="sender_email" required/>
 
-                <input type="tel" placeholder="Phone" id="contact-tel" />
+                <input type="tel" placeholder="Phone" id="contact-tel" name="sender_number" required/>
               </div>
 
-              <input type="text" placeholder="Subject" id="contact-subject" />
+              <input type="text" placeholder="Subject" id="contact-subject" name="subject" minlength="5" required/>
 
               <textarea
-                name=""
-                id=""
+                name="message"
                 placeholder="Message"
+                required
+                minlength="5"
               ></textarea>
 
-              <button type="submit">Send Message</button>
+              <button type="submit" id="send-button">Send Message</button>
             </form>
           </div>
 
         </div>
       </div>
     </main>
+
+    <!-- INFO POPUP CARD -->
+    <div class="popup-info-card">
+      <div class="info-img">
+          <img id="close-popup" src="../media/images/close-card.svg" alt="Close">
+
+          <div class="illustration-img-wp glow-blue">
+              <img src="../media/images/message-sent.svg" id="illustration-img" alt="">
+          </div>
+      </div>
+
+      <p>
+        Your message has been sent. We'll get back to you shortly
+      </p>
+
+      <button class="btn-primary">Continue browsing</button>
+    </div>
   </body>
+  <script src="../scripts/index.js"></script>
   <script src="../scripts/contact.js"></script>
 </html>
