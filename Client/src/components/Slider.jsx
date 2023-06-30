@@ -34,24 +34,21 @@ const Carousel = ({ children }) => {
   return (
     <div className="grid grid-cols-6 no-scrollbar w-screen h-screen overflow-hidden relative">
       <div className="absolute bottom-[30px] left-[250px] text-center right-0 flex  gap-3 z-30 ">
-        <span
-          onClick={() => handleChange(0)}
-          className={`bg-white ${
-            currentSlide === 0 ? "w-5" : "w-3"
-          } h-3 rounded-full  transition-[width] duration-500`}
-        ></span>
-        <span
-          onClick={() => handleChange(1)}
-          className={`bg-white ${
-            currentSlide === 1 ? "w-5" : "w-3"
-          } h-3 rounded-full transition-[width] duration-500 `}
-        ></span>
-        <span
-          onClick={() => handleChange(2)}
-          className={`bg-white ${
-            currentSlide === 2 ? "w-5" : "w-3"
-          } h-3 rounded-full  transition-[width] duration-500`}
-        ></span>
+        <SliderNav
+          handleChange={handleChange}
+          currentSlide={currentSlide}
+          slide={0}
+        />
+        <SliderNav
+          handleChange={handleChange}
+          currentSlide={currentSlide}
+          slide={1}
+        />
+        <SliderNav
+          handleChange={handleChange}
+          currentSlide={currentSlide}
+          slide={2}
+        />
       </div>
       <Slider {...settings} ref={slideRef} className="no-scrollbar col-span-3">
         {images.map((item, idx) => (
@@ -73,5 +70,14 @@ const Carousel = ({ children }) => {
   );
 };
 
-const sliderNav = () => {};
+const SliderNav = ({ handleChange, currentSlide, slide }) => {
+  return (
+    <span
+      onClick={() => handleChange(slide)}
+      className={`bg-white ${
+        currentSlide === slide ? "w-5" : "w-3"
+      } h-3 rounded-full  transition-[width] duration-500`}
+    ></span>
+  );
+};
 export default Carousel;

@@ -1,23 +1,12 @@
 import api from "../helper/baseUrl";
 
-export const createAccount = async (inputData, setError, navigate) => {
-  const { full_name, email, password, confirm_password } = inputData;
-  console.log(full_name, email, password, confirm_password);
-  if (
-    (full_name === "") |
-    (email === "") |
-    (password === "") |
-    (confirm_password === "")
-  )
-    return setError({ InputError: "incomplete fields" });
-  if (password !== confirm_password)
-    return setError({ InputError: "password mismatch" });
-
+export const createAccount = async (values, navigate) => {
+  const { fullName, email, password, confirmPassword } = values;
   const response = await api.post("/auth/register", {
-    name: full_name,
+    name: fullName,
     email: email,
     password: password,
-    passwordConfirm: confirm_password,
+    passwordConfirm: confirmPassword,
   });
   return response;
 };

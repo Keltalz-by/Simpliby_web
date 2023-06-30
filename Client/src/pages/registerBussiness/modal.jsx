@@ -1,8 +1,10 @@
 import React from "react";
 import { FiCheck } from "react-icons/fi";
 import Button from "../../components/button";
+import { useNavigate } from "react-router-dom";
 
 const Modal = ({ setIsOpen }) => {
+  const navigate = useNavigate();
   const toggleModal = () => {
     setIsOpen(false);
   };
@@ -23,7 +25,10 @@ const Modal = ({ setIsOpen }) => {
         <Button
           name="start selling"
           extraclass="w-[13rem] h-[3rem] rounded-lg mt-5"
-          handleClick={() => toggleModal()}
+          handleClick={() => {
+            toggleModal();
+            navigate("/dashboard/home");
+          }}
         />
       </div>
     </div>

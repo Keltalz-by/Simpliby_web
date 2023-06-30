@@ -6,9 +6,11 @@ import { useNavigate } from "react-router-dom";
 
 const Verify = () => {
   const navigate = useNavigate();
+
   const createAccount = () => {
     navigate("/register");
   };
+
   return (
     <Layout>
       <div className="flex flex-col items-center h-full w-full gap-10 font-ERegular">

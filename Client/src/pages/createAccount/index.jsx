@@ -3,35 +3,32 @@ import TextInput from "../../components/TextInput";
 import Button from "../../components/button";
 import Layout from "../../components/layout";
 import { Link, useNavigate } from "react-router-dom";
-import { createAccount } from "../../utils/functions/auth/createAccount";
+// import { createAccount } from "../../utils/functions/auth/createAccount";
 import { handleChange } from "../../utils/functions/auth/handleChange";
 import Carousel from "../../components/Slider";
 import { useMutation, useQuery } from "@tanstack/react-query";
+import { Formik } from "formik";
+import { SignupValidation } from "../../utils/validationSchema/validationSchema";
+import { useBoundedStore } from "../../../store/store";
 
 const CreateAccount = () => {
-  const [inputData, setInputData] = useState({
-    full_name: "",
+  const createAccount = useBoundedStore((state) => state.createUser);
+  const initialValue = {
+    fullName: "",
     email: "",
     password: "",
-    confirm_password: "",
-  });
-  const [Error, setError] = useState({
-    InputError: "",
-  });
-  const [Enabled, setEnabled] = useState(false);
+    confirmPassword: "",
+  };
+
   const navigate = useNavigate();
 
-  const createUser = useMutation({
-    mutationKey: ["createUser"],
-    mutationFn: () => createAccount(inputData, setError, navigate),
-    onSettled: navigate("/verify"),
-  });
-  // const RegisterUser = () => {
-  //   console.log(error, isFetching, data);
-  //   refetch();
-  //   console.log(error, isFetching, data);
-  //   if (data) navigate("/verify");
-  // };
+  const handleSignUp = (values) => {
+    createAccount(values, navigate);
+    // if (response.data) {
+    navigate("/dashboard/home");
+    // }
+    console.log(values);
+  };
 
   return (
     <Carousel>
@@ -50,53 +47,74 @@ const CreateAccount = () => {
               </p>
             </span>
           </div>
-          <form action="" className=" relative flex flex-col gap-3">
-            <TextInput
-              name="full_name"
-              title="Full name"
-              value={inputData.full_name}
-              handleChange={(e) => handleChange(e, setInputData, inputData)}
-              error={Error}
-            />
-            <TextInput
-              name="email"
-              title="Email"
-              type="email"
-              value={inputData.email}
-              handleChange={(e) => handleChange(e, setInputData, inputData)}
-              error={Error}
-            />
-            <TextInput
-              name="password"
-              title="Password"
-              type="password"
-              value={inputData.password}
-              handleChange={(e) => handleChange(e, setInputData, inputData)}
-              error={Error}
-            />
-            <TextInput
-              name="confirm_password"
-              title="Confirm password"
-              type="password"
-              value={inputData.confirm_password}
-              handleChange={(e) => handleChange(e, setInputData, inputData)}
-              error={Error}
-            />
-
-            {Error.InputError ? (
-              <span className="absolute -bottom-5 left-5 text-sm text-[red]">
-                {Error.InputError}
-              </span>
-            ) : null}
-          </form>
-          <div>
-            <Button
-              handleClick={() => createUser.mutate()}
-              // loading={isFetching}
-              name="Create Account"
-              extraclass={`w-[25rem] h-[3rem]  rounded-lg`}
-            />
-          </div>
+          <Formik
+            initialValues={initialValue}
+            validationSchema={SignupValidation}
+            onSubmit={(values) => {
+              handleSignUp(values);
+            }}
+          >
+            {({
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              values,
+              errors,
+              touched,
+            }) => (
+              <>
+                <div className="relative flex flex-col gap-3">
+                  <TextInput
+                    name="full_name"
+                    title="Full name"
+                    placeholder="Full name"
+                    value={values.fullName}
+                    handleChange={handleChange("fullName")}
+                    error={errors.fullName}
+                    touched={touched.fullName}
+                  />
+                  <TextInput
+                    name="email"
+                    title="Email"
+                    placeholder="Email"
+                    type="email"
+                    value={values.email}
+                    handleChange={handleChange("email")}
+                    error={errors.email}
+                    touched={touched.email}
+                  />
+                  <TextInput
+                    name="password"
+                    title="Password"
+                    placeholder="password"
+                    type="password"
+                    value={values.password}
+                    handleChange={handleChange("password")}
+                    error={errors.password}
+                    touched={touched.password}
+                  />
+                  <TextInput
+                    name="confirm_password"
+                    title="Confirm password"
+                    placeholder="Confirm password"
+                    type="password"
+                    value={values.confirmPassword}
+                    handleChange={handleChange("confirmPassword")}
+                    error={errors.confirmPassword}
+                    touched={touched.confirmPassword}
+                  />
+                </div>
+                <div>
+                  <Button
+                    handleClick={handleSubmit}
+                    // loading={isFetching}
+                    name="Create Account"
+                    extraclass={`w-[25rem] h-[3rem]  rounded-lg`}
+                  />
+                </div>
+              </>
+            )}
+          </Formik>
         </div>
       </Layout>
     </Carousel>
