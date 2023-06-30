@@ -1,5 +1,7 @@
+
 const countrySelect = document.querySelector('#country-list');
 const citySelect = document.querySelector('#city-list');
+const searchButton = document.querySelector('#search-btn');
 
 
 async function getCountryData(){
@@ -61,4 +63,11 @@ window.addEventListener('load', () => {
             updateCitySelectOptions(cities);
         });
     });
+
+    searchButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        showInfoPopup();
+    });
 });
+

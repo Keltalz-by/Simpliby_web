@@ -20,7 +20,7 @@ body{
 }
 
 #container h1 {
-  color: rgb(7, 7, 87);
+  color: var(--text-color-blue);
   padding-bottom: 0.5rem;
   font-size: 3.125rem;
   font-weight: 600;
@@ -69,6 +69,10 @@ body{
   color: var(--text-color-primary);
 }
 
+#message-form:invalid button{
+  opacity: 0.7;
+  cursor: not-allowed;
+}
 
 #contact-form textarea {
   height: 180px;
@@ -96,12 +100,12 @@ body{
 
 button {
   padding: 0.5em 1em;
-  border-radius: 15px;
+  border-radius: 8px;
   background-color: var(--bg-blue);
   color: white;
   float: right;
   font-family: 'Eina01-Bold';
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-size: clamp(1.125rem, 3vw, 2rem);
 }
 
 /* media queries for a 800px */

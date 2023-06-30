@@ -124,7 +124,7 @@ a:hover{
     height: clamp(1.3rem, 2vw, 1.9rem);
 }
 
-.btn-primary:disabled{
+button:disabled, .btn-primary:disabled{
     pointer-events: none;
     opacity: 0.7;
 }
@@ -294,6 +294,123 @@ body:has(.open-menu){
 
 /* ------------------------------------ */
 
+/* ---------- Popup Info card ----------- */
+
+.popup-info-card{
+    position: fixed;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    height: 90%;
+    max-height: 600px;
+    max-width: 658px;
+    background: var(--bg-white);
+    border-radius: clamp(20px, 3vw, 50px);
+    padding: 34px 46px;
+    box-shadow: #4340414D 0px 0px 0px 100vmax;
+    animation: open-info-popup-card 0.2s ease-in forwards;
+    transform-origin: 50% 50%;
+}
+
+@keyframes open-info-popup-card {
+    from{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.popup-info-card .info-img{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px 0;
+    margin-bottom: 36px;
+}
+
+.popup-info-card .info-img #close-popup{
+    align-self: flex-end;
+    transition: 50ms ease-in;
+    cursor: pointer;
+    width: clamp(17px, 3vw, 40px);
+    height: clamp(17px, 3vw, 40px);
+}
+
+.popup-info-card .info-img #close-popup:hover{
+    transform: scale(1.02);
+    filter: brightness(50%);
+}
+
+.popup-info-card .info-img .illustration-img-wp{
+    width: 276px;
+    height: 276px;
+    border-radius: 50%;
+    border: 3px solid var(--bg-powder-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 34px; 
+    animation-play-state: paused;
+    position: relative;
+}    
+
+.glow-blue{
+    animation: glow-blue 1s ease-in-out infinite alternate;
+}
+
+.glow-red{
+    animation: glow-red 1s ease-in-out infinite alternate !important;
+    border-color: #FA0611 !important;
+}
+
+@keyframes glow-blue {
+    from{
+        box-shadow: 0px 0px 5px var(--bg-powder-blue);
+    }
+    to{
+        box-shadow: 0px 0px 20px var(--bg-powder-blue);
+    }
+}
+
+@keyframes glow-red {
+    from{
+        box-shadow: 0px 0px 5px #FA0611;
+    }
+    to{
+        box-shadow: 0px 0px 20px #FA0611
+    }
+}
+
+.popup-info-card .info-img #illustration-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.popup-info-card p{
+    font-family: "Eina01-SemiBold";
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    line-height: 30px;
+    margin-bottom: 27px;
+}
+
+.popup-info-card:where(.open-menu) .illustration-img-wp{
+    animation-play-state: running !important;
+}
+
+/* ---------------------------------- */
+
 /* -----------Footer------------- */
 
 footer{
@@ -410,4 +527,14 @@ footer #copyright{
         align-items: flex-start;
     }
 
+}
+
+@media screen and (max-width: 500px){
+    .popup-info-card{
+        max-height: 500px;
+    }
+    .popup-info-card .info-img .illustration-img-wp{
+        width: 161px;
+        height: 161px;
+    }
 }
