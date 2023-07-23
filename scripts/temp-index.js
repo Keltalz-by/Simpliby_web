@@ -1,7 +1,5 @@
 const faqs = document.querySelectorAll('.faq');
-const subscribeForm = document.querySelector('#subscribe-form');
-// const subscribeFormInput = subscribeForm.querySelector('input');
-// const subscribeFormButton = subscribeForm.querySelector('button');
+const subscribeSection = document.querySelector('#subscribe-section');
 
 
 window.addEventListener('click', (event) => {
@@ -10,17 +8,9 @@ window.addEventListener('click', (event) => {
             faq.querySelector('.answer').classList.toggle('faq-ans-open');
         };
     });
-
-    // if(subscribeFormButton.contains(event.target)){
-    //     let subscriberEmail = subscribeFormInput.value;
-    // };
 });
 
 
-// Subscription form validation
-// subscribeFormInput.addEventListener('input', () => {
-//     subscribeFormButton.disabled = !subscribeFormInput.checkValidity();
-// });
 
 
 function getTimeRemaining(enddate) {
@@ -67,17 +57,18 @@ function setTimeRemaining(enddate) {
 };
 
 setInterval(() => {
-    setTimeRemaining('07-12-2023');
+    setTimeRemaining('10-12-2023');
 }, 1000);
 
 
-// const animObserver = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//         if(entry.isIntersecting){
-//             entry.target.classList.add('start-anim');
-//         };
-//     });
-// });
+const subscribeSectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            dropDownHamburgerMenu.classList.remove('open-menu');
+        };
+    });
+});
+subscribeSectionObserver.observe(subscribeSection);
 
 const hiwRoundsWrapper = document.querySelector('.how-it-works .content-wp');
 animObserver.observe(hiwRoundsWrapper);
