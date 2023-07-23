@@ -120,6 +120,10 @@ header{
     line-height: clamp(1.5rem, 4vw, 3.875rem);
 }
 
+.mission-text h2 > span{
+    border-bottom: 4px solid var(--bg-blue);
+}
+
 .mission-img{
     flex: 1;
     display: flex;

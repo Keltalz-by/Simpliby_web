@@ -1,0 +1,95 @@
+@import url('./base.css');
+
+/* Generics */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+body{
+  background-color: #F5F9FF;
+}
+
+/* Main content */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px 0;
+  max-width: 1560px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: clamp(40px, 2vw, 60px);
+  padding-bottom: 60px;
+}
+
+main :is(p, b) {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    line-height: 1.75rem;
+    letter-spacing: -0.5px;
+    font-weight: 400;
+}
+
+main a{
+    color: var(--text-color-blue);
+    font-family: inherit;
+    text-decoration: underline;
+    font-size: inherit;
+    font-style: normal;
+    font-weight: inherit;
+    line-height: inherit; /* 142.222% */
+    letter-spacing: inherit;
+}
+
+#tc-header{
+    color: var(--text-color-blue);
+    font-family: "Eina01-Bold";
+    font-size: clamp(2rem, 2vw, 2.6rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: clamp(2.5rem, 2vw, 4rem); 
+    letter-spacing: -0.5px;
+    text-align: center;
+    align-self: center;
+}
+
+#tc-intro{
+    width: 100%;
+}
+
+#tc-main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.tc-list-item{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 5px 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.tc-list-item .item-title{
+    text-decoration: underline;
+    color: #000;
+    font-family: "Eina01-Bold";
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 470px) {
+    #tc-header{
+        text-align: left;
+        align-self: left;
+    }
+}
+
