@@ -57,7 +57,7 @@ function setTimeRemaining(enddate) {
 };
 
 setInterval(() => {
-    setTimeRemaining('10-12-2023');
+    setTimeRemaining('10-12-2024');
 }, 1000);
 
 
